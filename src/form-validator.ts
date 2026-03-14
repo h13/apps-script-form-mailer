@@ -26,10 +26,20 @@ export function validateFormInput(input: FormInput): ValidationResult {
     errors.push("メールアドレスは必須です");
   } else if (!EMAIL_PATTERN.test(email)) {
     errors.push("メールアドレスの形式が正しくありません");
+  } else if (/[\r\n]/.test(email)) {
+    errors.push("メールアドレスに不正な文字が含まれています");
   }
 
   if (body === "") {
     errors.push("お問い合わせ内容は必須です");
+  }
+
+  if (name.length > 100) {
+    errors.push("名前は100文字以内で入力してください");
+  }
+
+  if (body.length > 5000) {
+    errors.push("お問い合わせ内容は5000文字以内で入力してください");
   }
 
   return { valid: errors.length === 0, errors };

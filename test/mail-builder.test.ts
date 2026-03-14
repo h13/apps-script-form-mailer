@@ -50,4 +50,15 @@ describe("buildMailOptions", () => {
     expect(result.htmlBody).not.toContain("<img");
     expect(result.htmlBody).toContain("&lt;script&gt;");
   });
+
+  it("strips CRLF from replyTo email", () => {
+    const injected = {
+      name: "Taro",
+      email: "taro@example.com\r\nBcc: victim@example.com",
+      body: "Test",
+    };
+    const result = buildMailOptions(injected, "admin@example.com");
+    expect(result.replyTo).not.toContain("\r");
+    expect(result.replyTo).not.toContain("\n");
+  });
 });

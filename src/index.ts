@@ -26,10 +26,17 @@ function submitForm(formData: {
   }
 
   const mailOptions = buildMailOptions(formData, ADMIN_EMAIL);
-  GmailApp.sendEmail(mailOptions.to, mailOptions.subject, "", {
-    htmlBody: mailOptions.htmlBody,
-    replyTo: mailOptions.replyTo,
-  });
+  try {
+    GmailApp.sendEmail(mailOptions.to, mailOptions.subject, "", {
+      htmlBody: mailOptions.htmlBody,
+      replyTo: mailOptions.replyTo,
+    });
+  } catch {
+    return {
+      status: "error" as const,
+      message: "送信に失敗しました。しばらくしてから再度お試しください。",
+    };
+  }
 
   return {
     status: "success",

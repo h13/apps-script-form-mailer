@@ -16,7 +16,8 @@ function escapeHtml(str: string): string {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 export function buildMailOptions(
@@ -24,12 +25,12 @@ export function buildMailOptions(
   adminEmail: string,
 ): MailOptions {
   const name = escapeHtml(input.name.trim());
-  const email = input.email.trim();
+  const email = input.email.trim().replace(/[\r\n]/g, "");
   const body = escapeHtml(input.body.trim());
 
   return {
     to: adminEmail,
-    subject: `お問い合わせ: ${input.name.trim()}`,
+    subject: `お問い合わせ: ${name}`,
     htmlBody: [
       "<h2>お問い合わせがありました</h2>",
       `<p><strong>名前:</strong> ${name}</p>`,

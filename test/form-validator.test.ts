@@ -68,4 +68,35 @@ describe("validateFormInput", () => {
     });
     expect(result.valid).toBe(true);
   });
+
+  it("rejects email with CRLF characters", () => {
+    const result = validateFormInput({
+      name: "Taro",
+      email: "taro@example.com\r\nBcc: victim@example.com",
+      body: "Message",
+    });
+    expect(result.valid).toBe(false);
+  });
+
+  it("rejects name exceeding 100 characters", () => {
+    const result = validateFormInput({
+      name: "a".repeat(101),
+      email: "taro@example.com",
+      body: "Message",
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors).toContain("名前は100文字以内で入力してください");
+  });
+
+  it("rejects body exceeding 5000 characters", () => {
+    const result = validateFormInput({
+      name: "Taro",
+      email: "taro@example.com",
+      body: "a".repeat(5001),
+    });
+    expect(result.valid).toBe(false);
+    expect(result.errors).toContain(
+      "お問い合わせ内容は5000文字以内で入力してください",
+    );
+  });
 });
