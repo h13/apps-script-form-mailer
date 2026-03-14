@@ -4,6 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D24-green.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
+[![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-Web%20App-4285F4.svg)](https://developers.google.com/apps-script)
+
+[日本語](README.ja.md)
 
 Google Apps Script contact form Web App with Gmail notification. Validates user input server-side and sends email via `GmailApp.sendEmail`.
 
