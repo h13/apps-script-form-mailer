@@ -1,7 +1,7 @@
 # apps-script-form-mailer
 
 [![CI](https://github.com/h13/apps-script-form-mailer/actions/workflows/ci.yml/badge.svg)](https://github.com/h13/apps-script-form-mailer/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/h13/apps-script-form-mailer/blob/main/LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D24-green.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-Web%20App-4285F4.svg)](https://developers.google.com/apps-script)
