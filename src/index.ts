@@ -6,7 +6,7 @@ interface SubmitResult {
   readonly message: string;
 }
 
-const ADMIN_EMAIL = "admin@example.com";
+const ADMIN_EMAIL = "h13.webmail@gmail.com";
 
 function doGet(): GoogleAppsScript.HTML.HtmlOutput {
   return HtmlService.createHtmlOutputFromFile("form")
