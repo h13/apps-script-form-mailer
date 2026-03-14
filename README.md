@@ -67,6 +67,15 @@ test/
 appsscript.json      # GAS manifest (gmail.send scope, USER_DEPLOYING)
 ```
 
+## Apps Script Projects
+
+These projects are publicly viewable:
+
+| Environment | Link |
+|-------------|------|
+| Development | [Open in Apps Script](https://script.google.com/d/13ENqQo2MQrb8HE9ndNykhAhx80jnOyZs7Piz6iugloVNqzUcuyIY3Yn3/edit) |
+| Production  | [Open in Apps Script](https://script.google.com/d/1FzOLej8FsTw7TYpvWqSuxtB4jYy8TivAjDe0sbAsmANf9LPP2hS6Hw2O/edit) |
+
 ## License
 
 [MIT](LICENSE)

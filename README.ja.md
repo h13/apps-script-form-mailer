@@ -67,6 +67,15 @@ test/
 appsscript.json      # GAS マニフェスト (gmail.send スコープ、USER_DEPLOYING)
 ```
 
+## Apps Script プロジェクト
+
+これらのプロジェクトは閲覧可能です:
+
+| 環境 | リンク |
+|------|--------|
+| Development | [Apps Script で開く](https://script.google.com/d/13ENqQo2MQrb8HE9ndNykhAhx80jnOyZs7Piz6iugloVNqzUcuyIY3Yn3/edit) |
+| Production  | [Apps Script で開く](https://script.google.com/d/1FzOLej8FsTw7TYpvWqSuxtB4jYy8TivAjDe0sbAsmANf9LPP2hS6Hw2O/edit) |
+
 ## ライセンス
 
 [MIT](LICENSE)
