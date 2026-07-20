@@ -25,10 +25,10 @@ doGet → Serve form.html as Web App
 
 ## Apps Script Projects
 
-| Environment | Link |
-|-------------|------|
-| dev | [form-mailer-dev](https://script.google.com/d/13ENqQo2MQrb8HE9ndNykhAhx80jnOyZs7Piz6iugloVNqzUcuyIY3Yn3/edit) |
-| prod | [form-mailer-prod](https://script.google.com/d/1FzOLej8FsTw7TYpvWqSuxtB4jYy8TivAjDe0sbAsmANf9LPP2hS6Hw2O/edit) |
+| Environment | Link                                                                                                           |
+| ----------- | -------------------------------------------------------------------------------------------------------------- |
+| dev         | [form-mailer-dev](https://script.google.com/d/13ENqQo2MQrb8HE9ndNykhAhx80jnOyZs7Piz6iugloVNqzUcuyIY3Yn3/edit)  |
+| prod        | [form-mailer-prod](https://script.google.com/d/1FzOLej8FsTw7TYpvWqSuxtB4jYy8TivAjDe0sbAsmANf9LPP2hS6Hw2O/edit) |
 
 ## Quick Start
 
@@ -52,9 +52,9 @@ Change `ADMIN_EMAIL` in `src/index.ts` to the email address that should receive 
 
 Deploy via the Apps Script editor or `clasp deploy` with the following settings:
 
-| Setting | Value |
-|---------|-------|
-| Execute as | Me |
+| Setting        | Value  |
+| -------------- | ------ |
+| Execute as     | Me     |
 | Who has access | Anyone |
 
 The script runs as the deploying user's account, so Gmail sends from that account.
@@ -74,14 +74,14 @@ test/
 
 ## Development
 
-| Command | Description |
-|---------|-------------|
-| `pnpm run check` | lint + lint:css + lint:html + typecheck + test (all checks) |
-| `pnpm run build` | Bundle TypeScript + copy assets to `dist/` |
-| `pnpm run test` | Jest with coverage |
-| `pnpm run test -- --watch` | Jest watch mode |
-| `pnpm run deploy` | check → build → deploy to dev |
-| `pnpm run deploy:prod` | check → build → deploy to production |
+| Command                    | Description                                                 |
+| -------------------------- | ----------------------------------------------------------- |
+| `pnpm run check`           | lint + lint:css + lint:html + typecheck + test (all checks) |
+| `pnpm run build`           | Bundle TypeScript + copy assets to `dist/`                  |
+| `pnpm run test`            | Jest with coverage                                          |
+| `pnpm run test -- --watch` | Jest watch mode                                             |
+| `pnpm run deploy`          | check → build → deploy to dev                               |
+| `pnpm run deploy:prod`     | check → build → deploy to production                        |
 
 ## CI/CD
 

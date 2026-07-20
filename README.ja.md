@@ -25,9 +25,9 @@ doGet → form.html を Web アプリとして配信
 
 ## Apps Script プロジェクト
 
-| 環境 | リンク |
-|------|--------|
-| dev | [form-mailer-dev](https://script.google.com/d/13ENqQo2MQrb8HE9ndNykhAhx80jnOyZs7Piz6iugloVNqzUcuyIY3Yn3/edit) |
+| 環境 | リンク                                                                                                         |
+| ---- | -------------------------------------------------------------------------------------------------------------- |
+| dev  | [form-mailer-dev](https://script.google.com/d/13ENqQo2MQrb8HE9ndNykhAhx80jnOyZs7Piz6iugloVNqzUcuyIY3Yn3/edit)  |
 | prod | [form-mailer-prod](https://script.google.com/d/1FzOLej8FsTw7TYpvWqSuxtB4jYy8TivAjDe0sbAsmANf9LPP2hS6Hw2O/edit) |
 
 ## クイックスタート
@@ -52,9 +52,9 @@ doGet → form.html を Web アプリとして配信
 
 Apps Script エディタまたは `clasp deploy` で以下の設定でデプロイ:
 
-| 設定 | 値 |
-|------|-----|
-| 実行者 | 自分 |
+| 設定                   | 値   |
+| ---------------------- | ---- |
+| 実行者                 | 自分 |
 | アクセスできるユーザー | 全員 |
 
 スクリプトはデプロイしたユーザーのアカウントとして実行されるため、Gmail もそのアカウントから送信される。
@@ -74,14 +74,14 @@ test/
 
 ## 開発
 
-| コマンド | 説明 |
-|---------|------|
-| `pnpm run check` | lint + lint:css + lint:html + typecheck + test（全チェック） |
-| `pnpm run build` | TypeScript をバンドルしてアセットを `dist/` にコピー |
-| `pnpm run test` | Jest（カバレッジ付き） |
-| `pnpm run test -- --watch` | Jest ウォッチモード |
-| `pnpm run deploy` | check → build → dev にデプロイ |
-| `pnpm run deploy:prod` | check → build → 本番にデプロイ |
+| コマンド                   | 説明                                                         |
+| -------------------------- | ------------------------------------------------------------ |
+| `pnpm run check`           | lint + lint:css + lint:html + typecheck + test（全チェック） |
+| `pnpm run build`           | TypeScript をバンドルしてアセットを `dist/` にコピー         |
+| `pnpm run test`            | Jest（カバレッジ付き）                                       |
+| `pnpm run test -- --watch` | Jest ウォッチモード                                          |
+| `pnpm run deploy`          | check → build → dev にデプロイ                               |
+| `pnpm run deploy:prod`     | check → build → 本番にデプロイ                               |
 
 ## CI/CD
 
