@@ -42,6 +42,10 @@
     "*.ts": [
       "oxlint --fix",
       "oxfmt --write"
+    ],
+    "*.html": [
+      "htmlhint",
+      "oxfmt --write"
     ]
   },
   "engines": {
