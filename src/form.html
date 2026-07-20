@@ -93,36 +93,36 @@
 
     <script>
       document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
+        .getElementById('contact-form')
+        .addEventListener('submit', function (e) {
           e.preventDefault();
-          var btn = document.getElementById("submit-btn");
+          var btn = document.getElementById('submit-btn');
           btn.disabled = true;
-          btn.textContent = "送信中...";
+          btn.textContent = '送信中...';
           var formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            body: document.getElementById("body").value,
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            body: document.getElementById('body').value,
           };
           google.script.run
             .withSuccessHandler(function (res) {
-              var el = document.getElementById("result");
-              el.className = "result " + res.status;
+              var el = document.getElementById('result');
+              el.className = 'result ' + res.status;
               el.textContent = res.message;
-              el.style.display = "block";
+              el.style.display = 'block';
               btn.disabled = false;
-              btn.textContent = "送信";
-              if (res.status === "success") {
-                document.getElementById("contact-form").reset();
+              btn.textContent = '送信';
+              if (res.status === 'success') {
+                document.getElementById('contact-form').reset();
               }
             })
             .withFailureHandler(function (err) {
-              var el = document.getElementById("result");
-              el.className = "result error";
-              el.textContent = "エラーが発生しました: " + err.message;
-              el.style.display = "block";
+              var el = document.getElementById('result');
+              el.className = 'result error';
+              el.textContent = 'エラーが発生しました: ' + err.message;
+              el.style.display = 'block';
               btn.disabled = false;
-              btn.textContent = "送信";
+              btn.textContent = '送信';
             })
             .submitForm(formData);
         });

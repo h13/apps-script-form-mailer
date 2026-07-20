@@ -1,16 +1,16 @@
-import { validateFormInput } from "./form-validator.js";
-import { buildMailOptions } from "./mail-builder.js";
+import { validateFormInput } from './form-validator.js';
+import { buildMailOptions } from './mail-builder.js';
 
 interface SubmitResult {
-  readonly status: "success" | "error";
+  readonly status: 'success' | 'error';
   readonly message: string;
 }
 
-const ADMIN_EMAIL = "h13.webmail@gmail.com";
+const ADMIN_EMAIL = 'h13.webmail@gmail.com';
 
 function doGet(): GoogleAppsScript.HTML.HtmlOutput {
-  return HtmlService.createHtmlOutputFromFile("form")
-    .setTitle("お問い合わせ")
+  return HtmlService.createHtmlOutputFromFile('form')
+    .setTitle('お問い合わせ')
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
@@ -22,24 +22,24 @@ function submitForm(formData: {
   const validation = validateFormInput(formData);
 
   if (!validation.valid) {
-    return { status: "error", message: validation.errors.join("、") };
+    return { status: 'error', message: validation.errors.join('、') };
   }
 
   const mailOptions = buildMailOptions(formData, ADMIN_EMAIL);
   try {
-    GmailApp.sendEmail(mailOptions.to, mailOptions.subject, "", {
+    GmailApp.sendEmail(mailOptions.to, mailOptions.subject, '', {
       htmlBody: mailOptions.htmlBody,
       replyTo: mailOptions.replyTo,
     });
   } catch {
     return {
-      status: "error" as const,
-      message: "送信に失敗しました。しばらくしてから再度お試しください。",
+      status: 'error' as const,
+      message: '送信に失敗しました。しばらくしてから再度お試しください。',
     };
   }
 
   return {
-    status: "success",
-    message: "お問い合わせを送信しました。ありがとうございます。",
+    status: 'success',
+    message: 'お問い合わせを送信しました。ありがとうございます。',
   };
 }

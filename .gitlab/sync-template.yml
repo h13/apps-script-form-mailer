@@ -7,7 +7,7 @@ template_sync:
   stage: sync
   image: alpine/git@sha256:77418e6e7c7f434c4a98eaff04ef16840cf03649c881c03948e3e213923e3136
   variables:
-    TEMPLATE_REPO_URL: "https://github.com/h13/apps-script-fleet.git"
+    TEMPLATE_REPO_URL: 'https://github.com/h13/apps-script-fleet.git'
   script:
     - |
       set -f  # disable globbing to safely expand $INCLUDE
