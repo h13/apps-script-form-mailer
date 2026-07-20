@@ -1,6 +1,11 @@
 {
-  "preset": "ts-jest",
   "testEnvironment": "node",
+  "transform": {
+    "^.+\\.tsx?$": [
+      "@swc/jest",
+      { "jsc": { "parser": { "syntax": "typescript" }, "target": "es2020" } }
+    ]
+  },
   "modulePathIgnorePatterns": ["<rootDir>/dist/", "<rootDir>/build/"],
   "testPathIgnorePatterns": ["<rootDir>/dist/", "<rootDir>/build/"],
   "moduleNameMapper": {

@@ -1,5 +1,5 @@
-import { validateFormInput } from './form-validator.js';
-import { buildMailOptions } from './mail-builder.js';
+import { validateFormInput } from './form-validator';
+import { buildMailOptions } from './mail-builder';
 
 interface SubmitResult {
   readonly status: 'success' | 'error';
