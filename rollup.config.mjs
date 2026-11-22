@@ -9,8 +9,8 @@ export default {
     format: 'esm',
   },
   plugins: [
-    nodeResolve({ extensions: ['.js', '.ts'] }),
     cleanup({ comments: 'none', extensions: ['.ts'] }),
+    nodeResolve({ extensions: ['.js', '.ts'] }),
     swc(),
   ],
   context: 'this',
